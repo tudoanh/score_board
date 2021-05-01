@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+{% block body %}
+  <div class="columns">
+    <div class="column">
+      <input class="input is-primary" type="text" placeholder="Tên 1">
+      <p class="subtitle" id="p1-score">0</p>
+      </br>
+      <button class="button" id="p1-1">1</button>
+      <button class="button" id="p1-2">2</button>
+      <button class="button" id="p1-3">3</button>
+      <button class="button" id="p1-4">4</button>
+      <button class="button is-dark" id="p1-u">Ù</button>
+      <button class="button is-primary" id="p1-c">Chốt</button>
+      <button class="button is-warning" id="p1-m">Mất Chốt</button>
+      <button class="button is-danger" id="p1-d">Đền làng</button>
+    </div>
+    <div class="column">
+      <input class="input is-primary" type="text" placeholder="Tên 2">
+      <p class="subtitle" id="p2-score">0</p>
+      </br>
+      <button class="button" id="p2-1">1</button>
+      <button class="button" id="p2-2">2</button>
+      <button class="button" id="p2-3">3</button>
+      <button class="button" id="p2-4">4</button>
+      <button class="button is-dark" id="p2-u">Ù</button>
+      <button class="button is-primary" id="p2-c">Chốt</button>
+      <button class="button is-warning" id="p2-m">Mất Chốt</button>
+      <button class="button is-danger" id="p2-d">Đền làng</button>
+    </div>
+    <div class="column">
+
+      <input class="input is-primary" type="text" placeholder="Tên 3">
+      <p class="subtitle" id="p3-score">0</p>
+      </br>
+      <button class="button" id="p3-1">1</button>
+      <button class="button" id="p3-2">2</button>
+      <button class="button" id="p3-3">3</button>
+      <button class="button" id="p3-4">4</button>
+      <button class="button is-dark" id="p3-u">Ù</button>
+      <button class="button is-primary" id="p3-c">Chốt</button>
+      <button class="button is-warning" id="p3-m">Mất Chốt</button>
+      <button class="button is-danger" id="p3-d">Đền làng</button>
+    </div>
+    <div class="column">
+      <input class="input is-primary" type="text" placeholder="Tên 4">
+      <p class="subtitle" id="p4-score">0</p>
+      </br>
+      <button class="button" id="p4-1">1</button>
+      <button class="button" id="p4-2">2</button>
+      <button class="button" id="p4-3">3</button>
+      <button class="button" id="p4-4">4</button>
+      <button class="button is-dark" id="p4-u">Ù</button>
+      <button class="button is-primary" id="p4-c">Chốt</button>
+      <button class="button is-warning" id="p4-m">Mất Chốt</button>
+      <button class="button is-danger" id="p4-d">Đền làng</button>
+    </div>
+  </div>
+
+  <script>
+    var p1_score = 0;
+    var p2_score = 0;
+    var p3_score = 0;
+    var p4_score = 0;
+$(document).ready(function() {
+    $("#p1-1").click(function(){
+      p1_score = p1_score + 30
+      $('#p1-score').text(p1_score)
+    });
+    $("#p1-2").click(function(){
+      p1_score = p1_score - 5
+      $('#p1-score').text(p1_score)
+    });
+    $("#p1-3").click(function(){
+      p1_score = p1_score - 10
+      $('#p1-score').text(p1_score)
+    });
+    $("#p1-4").click(function(){
+      p1_score = p1_score - 15
+      $('#p1-score').text(p1_score)
+    });
+    $("#p1-u").click(function(){
+      p1_score = p1_score + 75
+      p2_score = p2_score - 25
+      p3_score = p3_score - 25
+      p4_score = p4_score - 25
+      $('#p1-score').text(p1_score)
+      $('#p2-score').text(p2_score)
+      $('#p3-score').text(p3_score)
+      $('#p4-score').text(p4_score)
+    });
+    $("#p1-c").click(function(){
+      p1_score = p1_score + 20
+      $('#p1-score').text(p1_score)
+    });
+    $("#p1-m").click(function(){
+      p1_score = p1_score - 20
+      $('#p1-score').text(p1_score)
+    });
+    $("#p1-d").click(function(){
+      p1_score = p1_score - 75
+      $('#p1-score').text(p1_score)
+    });
+
+    $("#p2-1").click(function(){
+      p2_score = p2_score + 30
+      $('#p2-score').text(p2_score)
+    });
+    $("#p2-2").click(function(){
+      p2_score = p2_score - 5
+      $('#p2-score').text(p2_score)
+    });
+    $("#p2-3").click(function(){
+      p2_score = p2_score - 10
+      $('#p2-score').text(p2_score)
+    });
+    $("#p2-4").click(function(){
+      p2_score = p2_score - 15
+      $('#p2-score').text(p2_score)
+    });
+    $("#p2-u").click(function(){
+      p2_score = p2_score + 75
+      p2_score = p1_score - 25
+      p3_score = p3_score - 25
+      p4_score = p4_score - 25
+      $('#p1-score').text(p1_score)
+      $('#p2-score').text(p2_score)
+      $('#p3-score').text(p3_score)
+      $('#p4-score').text(p4_score)
+    });
+    $("#p2-c").click(function(){
+      p2_score = p2_score + 20
+      $('#p2-score').text(p2_score)
+    });
+    $("#p2-m").click(function(){
+      p2_score = p2_score - 20
+      $('#p2-score').text(p2_score)
+    });
+    $("#p2-d").click(function(){
+      p2_score = p2_score - 75
+      $('#p2-score').text(p2_score)
+    });
+
+    $("#p3-1").click(function(){
+      p3_score = p3_score + 30
+      $('#p3-score').text(p3_score)
+    });
+    $("#p3-2").click(function(){
+      p3_score = p3_score - 5
+      $('#p3-score').text(p3_score)
+    });
+    $("#p3-3").click(function(){
+      p3_score = p3_score - 10
+      $('#p3-score').text(p3_score)
+    });
+    $("#p3-4").click(function(){
+      p3_score = p3_score - 15
+      $('#p3-score').text(p3_score)
+    });
+    $("#p3-u").click(function(){
+      p3_score = p3_score + 75
+      p3_score = p2_score - 25
+      p3_score = p1_score - 25
+      p4_score = p4_score - 25
+      $('#p1-score').text(p1_score)
+      $('#p2-score').text(p2_score)
+      $('#p3-score').text(p3_score)
+      $('#p4-score').text(p4_score)
+    });
+    $("#p3-c").click(function(){
+      p3_score = p3_score + 20
+      $('#p3-score').text(p3_score)
+    });
+    $("#p3-m").click(function(){
+      p3_score = p3_score - 20
+      $('#p3-score').text(p3_score)
+    });
+    $("#p3-d").click(function(){
+      p3_score = p3_score - 75
+      $('#p3-score').text(p3_score)
+    });
+
+    $("#p4-1").click(function(){
+      p4_score = p4_score + 30
+      $('#p4-score').text(p4_score)
+    });
+    $("#p4-2").click(function(){
+      p4_score = p4_score - 5
+      $('#p4-score').text(p4_score)
+    });
+    $("#p4-3").click(function(){
+      p4_score = p4_score - 10
+      $('#p4-score').text(p4_score)
+    });
+    $("#p4-4").click(function(){
+      p4_score = p4_score - 15
+      $('#p4-score').text(p4_score)
+    });
+    $("#p4-u").click(function(){
+      p4_score = p4_score + 75
+      p4_score = p2_score - 25
+      p4_score = p3_score - 25
+      p4_score = p1_score - 25
+      $('#p1-score').text(p1_score)
+      $('#p2-score').text(p2_score)
+      $('#p3-score').text(p3_score)
+      $('#p4-score').text(p4_score)
+    });
+    $("#p4-c").click(function(){
+      p4_score = p4_score + 20
+      $('#p4-score').text(p4_score)
+    });
+    $("#p4-m").click(function(){
+      p4_score = p4_score - 20
+      $('#p4-score').text(p4_score)
+    });
+    $("#p4-d").click(function(){
+      p4_score = p4_score - 75
+      $('#p4-score').text(p4_score)
+    });
+});
+
+  </script>
+{% endblock %}
